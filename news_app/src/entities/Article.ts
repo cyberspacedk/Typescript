@@ -6,3 +6,9 @@ export interface Article {
   rating:number;
   ratingCount:number;
 }
+
+export interface FullArticle {
+  id: string;
+  content: string;
+  bigImage: string;
+}

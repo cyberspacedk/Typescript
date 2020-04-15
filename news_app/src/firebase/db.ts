@@ -6,7 +6,7 @@ export const dbCreateUser= (id:string, username:string, email:string)=>{
     email,
     username
   }
-  db.ref(`users/${id}`).set(user)
+ return db.ref(`users/${id}`).set(user)
 };
 
 export const dbGetUsersOnce = ()=> db.ref('users').once("value")  

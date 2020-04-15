@@ -10,9 +10,9 @@ interface InterfaceState {
   authUser?:any
 }
 
-export const withAuthentification = (Component:any)=> {
+export const withAuthentication = (Component:any)=> {
 
-  class WithAuthentification extends React.Component<InterfaceProps, InterfaceState>{
+  class WithAuthentication extends React.Component<InterfaceProps, InterfaceState>{
     constructor(props:any){
       super(props);
       this.state = {
@@ -39,5 +39,5 @@ export const withAuthentification = (Component:any)=> {
     }
   }
 
-  return WithAuthentification
+  return WithAuthentication
 }

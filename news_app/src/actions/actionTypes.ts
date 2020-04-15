@@ -1,6 +1,22 @@
 import { LOAD_NEWS, ADD_NEWS, REMOVE_NEWS, EDIT_NEWS } from "./newsActions"
 import {Article} from '../entities/Article';
 import { MARK_AS_READ, ADD_TO_FAVORITE, ADD_TO_READ_LATER, RATE_ARTICLE, ADD_COMMENT, ADD_COMPLAIN } from "./articleActions";
+ 
+export interface ActionTypeBase  {
+  type:string
+}
+
+export interface NewsActionType extends ActionTypeBase{
+  id?:string
+  article?:Article
+} 
+
+export interface ArticleActionType extends ActionTypeBase{
+  id?:string
+  rate?:number;
+  comment?:string;
+  complain?:string
+}
 
 export const loadNews = ():NewsActionType=> {
   return {
@@ -71,21 +87,4 @@ export const addComplain = (id:string, complain:string):ArticleActionType =>{
     id,
     complain
   }
-}
-
-
-export interface ActionTypeBase  {
-  type:string
-}
-
-export interface NewsActionType extends ActionTypeBase{
-  id?:string
-  article?:Article
-} 
-
-export interface ArticleActionType extends ActionTypeBase{
-  id?:string
-  rate?:number;
-  comment?:string;
-  complain?:string
 }

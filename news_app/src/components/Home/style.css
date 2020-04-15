@@ -1,0 +1,4 @@
+ .NewItemContainer {
+   display: flex;
+   flex-wrap: wrap;
+ }

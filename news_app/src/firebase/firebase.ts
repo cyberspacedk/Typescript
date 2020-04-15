@@ -2,8 +2,10 @@ import * as firebase from 'firebase/app';
 import "firebase/auth"
 import 'firebase/database';
 
+import {API_KEY} from './apiKey'; 
+
 const firebaseConfig = {
-  apiKey: "AIzaSyAUOT3GhsPpOm1g5MYvQMBExGA6siP1ppc",
+  apiKey: API_KEY,
   authDomain: "tsnewsapp.firebaseapp.com",
   databaseURL: "https://tsnewsapp.firebaseio.com",
   projectId: "tsnewsapp",
